@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/auth_service.dart';
+import 'package:movie_app/home.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -120,10 +121,23 @@ class _LoginPageState extends State<LoginPage>{
                         },
                         color: Colors.teal,
                         textColor: Colors.white,
-                        child:Text('Register'),
+                        child:Text('Registrar'),
                       ),
                     ),
+                    SizedBox(height: 30,),
 
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 35),
+                      child: MaterialButton(
+                        minWidth: double.infinity,
+                        onPressed:(){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                        },
+                        color: Colors.teal,
+                        textColor: Colors.white,
+                        child:Text('Entrar'),
+                      ),
+                    ),
                   ],
                 )
               ),
